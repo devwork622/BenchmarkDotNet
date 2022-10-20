@@ -1,0 +1,19 @@
+---
+uid: BenchmarkDotNet.Samples.SAMPLENAME
+---
+
+## Sample: SAMPLENAME
+
+### Source code
+
+[!code-csharp[SAMPLENAME.cs](../../../samples/BenchmarkDotNet.Samples/SAMPLENAME.cs)]
+
+### Output
+
+
+### Links
+
+* TODO
+* The permanent link to this sample: @BenchmarkDotNet.Samples.SAMPLENAME
+
+---

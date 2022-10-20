@@ -1,0 +1,94 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "src/BenchmarkDotNet/*.csproj",
+            "src/BenchmarkDotNet.Annotations/*.csproj"
+          ],
+          "exclude": [
+            "**/obj/**",
+            "**/bin/**"
+          ],
+          "src": ".."
+        }
+      ],
+      "dest": "api",
+      "filter": "filter.yml",
+      "properties": {
+        "TargetFramework": "netstandard2.0"
+      },
+      "disableGitFeatures": true
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "api/**.yml",
+          "api/index.md"
+        ]
+      },
+      {
+        "files": [
+          "articles/**.md",
+          "articles/**/toc.yml",
+          "changelog/toc.yml",
+          "changelog/*.md",
+          "toc.yml",
+          "*.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**",
+          "logo/**"
+        ]
+      }
+    ],
+    "dest": "_site",
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": [
+      "default",
+      "template"
+    ],
+    "xrefService": [
+      "https://xref.docs.microsoft.com/query?uid={uid}"
+    ],
+    "postProcessors": ["ExtractSearchIndex"],
+    "markdownEngineName": "markdig",
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false,
+    "globalMetadata" :
+    {
+      "_appTitle" : "BenchmarkDotNet",
+      "_appFooter" : "Copyright &copy; 2013–2021 .NET Foundation and contributors",
+      "_appLogoPath" : "logo/icon.svg",
+      "_appFaviconPath": "logo/icon-32.png",
+      "_enableSearch": false
+    },
+    "sitemap":
+    {
+      "baseUrl": "https://benchmarkdotnet.org/",
+      "priority": 0.8,
+      "changefreq": "monthly",
+      "fileOptions":{
+          "**/articles/**": {
+              "priority": 0.8
+          },
+          "**/changelog/**": {
+              "priority": 0.5
+          },
+          "**/api/**": {
+              "priority": 0.3
+          }
+      }
+    }
+  }
+}

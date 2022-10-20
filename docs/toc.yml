@@ -1,0 +1,10 @@
+- name: Articles
+  href: articles/
+- name: API
+  href: api/
+  homepage: api/index.md
+- name: ChangeLog
+  href: changelog/
+  homepage: changelog/index.md
+- name: GitHub
+  href: https://github.com/dotnet/BenchmarkDotNet
